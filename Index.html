@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Brett Ebers · Logbook Portfolio</title>
+  <meta name="description" content="Showcasing my Logbook project—how I turn health & performance data into actionable insights without sharing proprietary details." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📘</text></svg>">
+  <style>
+    /* --- Base / Theme --- */
+    :root{
+      --bg:#0f1115;
+      --panel:#151925;
+      --ink:#e9edf1;
+      --muted:#a6b0c3;
+      --accent:#4cc9f0;
+      --accent-2:#a3ffbf;
+      --card:#121622;
+      --border:#23283b;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:20px}
+    header{position:sticky;top:0;background:rgba(15,17,21,.75);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:5}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:700}
+    .brand-badge{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,var(--accent),var(--accent-2))}
+    nav a{margin-left:18px;color:var(--muted)}
+    nav a.active, nav a:hover{color:var(--ink)}
+    /* --- Hero --- */
+    .hero{padding:70px 0 50px;background:
+      radial-gradient(1000px 500px at 80% -10%, rgba(76,201,240,.12), transparent 60%),
+      radial-gradient(700px 400px at -10% 10%, rgba(163,255,191,.10), transparent 55%)}
+    .hero h1{font-size:40px;line-height:1.1;margin:0 0 12px}
+    .hero p{max-width:720px;color:var(--muted);margin:0 0 22px}
+    .hero .chips{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+    .chip{padding:6px 10px;border:1px solid var(--border);border-radius:999px;color:var(--muted);background:rgba(255,255,255,.02)}
+    .cta{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#041018;font-weight:700}
+    .cta.secondary{background:transparent;color:var(--ink);border:1px solid var(--border)}
+    .cta + .cta{margin-left:10px}
+    /* --- Sections --- */
+    section{padding:36px 0;border-top:1px solid var(--border)}
+    section h2{margin:0 0 14px;font-size:22px}
+    .muted{color:var(--muted)}
+    /* --- Grid Cards --- */
+    .grid{display:grid;gap:18px}
+    @media(min-width:800px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+    .card h3{margin:8px 0 6px;font-size:18px}
+    .tag{display:inline-block;font-size:12px;padding:2px 8px;border:1px solid var(--border);border-radius:999px;color:var(--muted)}
+    .spark{height:140px;border-radius:10px;background:
+      linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01)),
+      repeating-linear-gradient(90deg, rgba(76,201,240,.18), rgba(76,201,240,.18) 1px, transparent 1px, transparent 12px),
+      radial-gradient(600px 120px at 50% 0%, rgba(163,255,191,.12), transparent 60%);}
+    /* --- Framework --- */
+    .flow{display:grid;gap:14px}
+    @media(min-width:900px){.flow{grid-template-columns:repeat(4,1fr)}}
+    .pill{background:var(--panel);border:1px dashed var(--border);border-radius:12px;padding:14px}
+    .arrow{display:flex;align-items:center;justify-content:center;color:var(--muted)}
+    /* --- Footer --- */
+    footer{padding:30px 0;color:var(--muted)}
+    .kicker{font-size:13px}
+    /* --- Utilities --- */
+    .sr{position:absolute;left:-10000px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <span class="brand-badge" aria-hidden="true"></span>
+        <span>Brett Ebers</span>
+      </div>
+      <nav>
+        <a href="#projects" class="active">Projects</a>
+        <a href="#framework">Framework</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Turning health & performance data into clear, usable decisions.</h1>
+        <p>
+          This site documents my <strong>Logbook</strong> work—focusing on methods, visuals, and decision logic.
+          I keep proprietary details and raw data private; what you’ll see is the <em>process</em> I use to translate noisy inputs
+          (sleep, HRV, workload, RPE, notes) into crisp insights and actions.
+        </p>
+        <div class="chips">
+          <span class="chip">Data Storytelling</span>
+          <span class="chip">Wearables & Readiness</span>
+          <span class="chip">Player/Patient-Centered Design</span>
+          <span class="chip">LLM-assisted Insight Workflow</span>
+        </div>
+        <a class="cta" href="#projects">View Examples</a>
+        <a class="cta secondary" href="#framework">See My Framework</a>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <h2>Selected Project Panels</h2>
+        <p class="muted">High-level, anonymized panels that show my approach—no raw/proprietary data.</p>
+
+        <div class="grid">
+          <!-- Card 1 -->
+          <article class="card">
+            <div class="spark" aria-hidden="true"></div>
+            <h3>Weekly Readiness Panel</h3>
+            <p class="muted">Blend HRV trend + subjective recovery + workload spikes into a simple
+              <em>High / Moderate / Low</em> readiness call for the next 48 hrs.</p>
+            <span class="tag">Methods: smoothing · thresholds · exception rules</span>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <div class="spark" aria-hidden="true"></div>
+            <h3>Sleep Consistency Pulse</h3>
+            <p class="muted">Show “consistency > peaks” by visualizing bedtime variance and its relationship with morning energy notes.</p>
+            <span class="tag">Methods: variance bands · small-N heuristics</span>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <div class="spark" aria-hidden="true"></div>
+            <h3>Micro-Cycle Load View</h3>
+            <p class="muted">A micro-cycle tile that flags when external load and internal strain diverge (effort mismatch).</p>
+            <span class="tag">Methods: z-scores · color states · guardrails</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="framework">
+      <div class="wrap">
+        <h2>My Holistic Performance Framework</h2>
+        <p class="muted">From signal capture → synthesis → decision → reflection. This is how the Logbook guides action.</p>
+
+        <div class="flow">
+          <div class="pill">
+            <strong>Inputs</strong><br/>
+            Wearables (HRV, sleep), training logs (load, RPE), notes (mood, soreness).
+          </div>
+          <div class="arrow">→</div>
+          <div class="pill">
+            <strong>Synthesis</strong><br/>
+            Cleaning, smoothing, simple features, trend detection, contextual overlays.
+          </div>
+          <div class="arrow">→</div>
+          <div class="pill">
+            <strong>Insight</strong><br/>
+            Readiness state, risk flags, “why now?” notes, small next actions.
+          </div>
+          <div class="arrow">→</div>
+          <div class="pill">
+            <strong>Action & Review</strong><br/>
+            Adjust plan; quick debrief next day to tighten feedback loops.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <h2>About</h2>
+        <p class="muted">
+          I work at the intersection of performance science, data, and product. My focus: clear methods,
+          transparent decisions, and humane tools that people actually use. MBA + 7 years in baseball ops & player development.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p class="muted">Want to talk shop or see more detail privately?</p>
+        <p><a href="mailto:brettebers@gmail.com" class="cta">Email me</a></p>
+        <p class="kicker">© <span id="y"></span> Brett Ebers · Built with GitHub Pages</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap muted">This site intentionally shows process over proprietary outputs.</div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
